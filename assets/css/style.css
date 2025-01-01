@@ -59,3 +59,47 @@ h1 {
   font-weight: bold; /* Membuat tulisan tebal */
   font-size: 8rem;    /* Menentukan ukuran font, sesuaikan sesuai kebutuhan */
 }
+
+@media (max-width: 1080px) {
+  .smaller-img {
+    width: 100%; /* Pastikan gambar tidak keluar dari layar */
+    height: auto;
+    padding-top: 5%;
+  }
+
+  h1 {
+    font-size: 3rem; /* Perkecil ukuran heading */
+    text-align: center; /* Centerkan teks untuk layar kecil */
+  }
+
+  .btn {
+    font-size: 1rem; /* Sesuaikan ukuran tombol */
+  }
+
+  .text-end {
+    text-align: center !important; /* Gambar tetap center di layar kecil */
+  }
+
+  .row.align-items-center {
+    flex-direction: column; /* Atur elemen gambar dan teks menjadi vertikal */
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+  h1 {
+    font-size: 4rem;
+    text-align: left !important;
+  }
+
+  .btn {
+    font-size: 1.5rem; /* Sesuaikan ukuran tombol */
+  }
+
+  img.smaller-img {
+    width: 80%; /* Atur gambar agar lebih kecil */
+  }
+}
