@@ -1,66 +1,57 @@
-/* General Styles */
+/* General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Header dan Footer menggunakan ukuran responsif dari Bootstrap */
 header {
-    background-color: #007bff;
-    padding: 1rem 0;
-}
-
-.navbar-brand {
-    font-weight: 600;
-    color: white;
-}
-
-.navbar-nav .nav-link {
-    color: white;
-    font-weight: 500;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f8f9fa;
+  padding: 0.5rem 0; /* Gunakan padding responsif dengan rem (ukuran relatif) */
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
-    padding: 1rem 0;
+  padding: 0.5rem 0; /* Gunakan padding responsif dengan rem (ukuran relatif) */
+  text-align: center;
 }
 
-/* Hero Section */
-.hero {
-    background-color: #007bff;
-    color: white;
-    padding: 100px 0;
+/* Main Container Padding */
+.container {
+  padding: 1.5rem 0;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 600;
+/* Buttons */
+.btn-outline-dark {
+  border: 2px solid #000;
+  color: #000;
 }
 
-.hero .btn {
-    font-weight: 500;
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
 }
 
-/* About Section */
-.about-section {
-    padding: 60px 0;
+.btn-primary {
+  background-color: #000;
+  color: #fff;
 }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
+/* Highlighting Active Navbar Item */
+.nav-link.active {
+  font-weight: bold;
+  color: #343a40 !important;
 }
 
-.contact-section {
-    padding: 60px 0;
+/* Gaya untuk gambar agar nempel di kanan */
+.smaller-img {
+  max-width: 60%; /* Sesuaikan dengan lebar yang diinginkan */
+  height: auto;
 }
 
-.contact-section h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
+
+/* Gaya untuk h1 */
+h1 {
+  font-weight: bold; /* Membuat tulisan tebal */
+  font-size: 8rem;    /* Menentukan ukuran font, sesuaikan sesuai kebutuhan */
 }
