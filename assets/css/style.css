@@ -3,16 +3,15 @@
 /* General Styling */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Space Grotesk', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* Header dan Footer menggunakan ukuran responsif dari Bootstrap */
-header {
-  padding: 0.5rem 0; /* Gunakan padding responsif dengan rem (ukuran relatif) */
 }
 
 footer {
@@ -22,26 +21,25 @@ footer {
 
 /* Main Container Padding */
 .container {
-  padding: 1.5rem 0;
-}
-
-/* Buttons */
-.btn-outline-dark {
-  border: 2px solid #000;
-  color: #000;
-}
-
-.btn-outline-dark:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.btn-primary {
-  background-color: #000;
-  color: #fff;
+  padding: 1.5rem 0.5rem;
 }
 
 /* Highlighting Active Navbar Item */
+.navbar {
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Pastikan navbar mencakup seluruh lebar layar */
+  z-index: 1000; /* Agar tetap di atas elemen lainnya */
+  background-color: white; /* Pastikan ada background agar konten di bawah tidak terlihat */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk pemisahan */
+}
+
+.nav-link {
+  padding: 0.5rem 10rem;
+}
+
 .nav-link.active {
   font-weight: bold;
   color: #343a40 !important;
@@ -53,12 +51,50 @@ footer {
   height: auto;
 }
 
+/* Main Size */
+.main-half-screen {
+  min-height : 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-/* Gaya untuk h1 */
-h1 {
+.main-full-screen {
+  min-height: 100vh; /* Memenuhi satu layar penuh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Menjaga konten tetap di tengah secara vertikal */
+}
+
+/* Text Style */
+h0 {
   font-weight: bold; /* Membuat tulisan tebal */
   font-size: 8rem;    /* Menentukan ukuran font, sesuaikan sesuai kebutuhan */
+  line-height: 1;
 }
+
+h4 {
+  font-weight: normal;
+}
+
+/* Section */
+.section-title {
+  display: inline-block; /* Garis hanya sepanjang teks */
+  position: relative;
+  margin-bottom: 1rem; /* Jarak antara teks dan konten di bawahnya */
+  padding-bottom: 0.5rem; /* Ruang antara teks dan garis */
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Panjang garis sesuai teks */
+  height: 1px; /* Ketebalan garis */
+  background-color: black; /* Warna garis */
+}
+
 
 @media (max-width: 1080px) {
   .smaller-img {
@@ -67,7 +103,7 @@ h1 {
     padding-top: 5%;
   }
 
-  h1 {
+  h0 {
     font-size: 3rem; /* Perkecil ukuran heading */
     text-align: center; /* Centerkan teks untuk layar kecil */
   }
@@ -90,7 +126,7 @@ h1 {
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
-  h1 {
+  h0 {
     font-size: 4rem;
     text-align: left !important;
   }
