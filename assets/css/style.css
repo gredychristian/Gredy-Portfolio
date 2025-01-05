@@ -19,12 +19,12 @@ footer {
   text-align: center;
 }
 
-/* Main Container Padding */
+/* CONTAINER PADDING */
 .container {
   padding: 1.5rem 0.5rem;
 }
 
-/* Highlighting Active Navbar Item */
+/* NAVBAR STYLING*/
 .navbar {
   padding: 0.5rem 0;
   position: fixed;
@@ -32,8 +32,20 @@ footer {
   left: 0;
   width: 100%; /* Pastikan navbar mencakup seluruh lebar layar */
   z-index: 1000; /* Agar tetap di atas elemen lainnya */
-  background-color: white; /* Pastikan ada background agar konten di bawah tidak terlihat */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk pemisahan */
+  background-color: black; /* Pastikan ada background agar konten di bawah tidak terlihat */
+  box-shadow: 0 0.1rem 0.2rem rgba(255, 255, 255, 0.3); /* Tambahkan bayangan untuk pemisahan */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-light .navbar-brand {
+  color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #f8f9fa !important;
 }
 
 .nav-link {
@@ -49,6 +61,13 @@ footer {
 .smaller-img {
   max-width: 60%; /* Sesuaikan dengan lebar yang diinginkan */
   height: auto;
+  border-radius: 10%;
+  border: 0.2rem solid rgba(255, 255, 255, 1);
+  transition: transform 0.3s ease;
+}
+
+.smaller-img:hover {
+  transform: scale(1.05);
 }
 
 /* Main Size */
@@ -73,26 +92,94 @@ h0 {
   line-height: 1;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 h4 {
   font-weight: normal;
 }
 
-/* Section */
-.section-title {
-  display: inline-block; /* Garis hanya sepanjang teks */
-  position: relative;
-  margin-bottom: 1rem; /* Jarak antara teks dan konten di bawahnya */
-  padding-bottom: 0.5rem; /* Ruang antara teks dan garis */
+/* DIVIDER LINE */
+.section-divider {
+  border: none; /* Hilangkan gaya default <hr> */
+  border-top: 1px solid #000; /* Warna dan ketebalan garis */
+  width: 100%;
+  margin: 0 auto 4rem; /* Pusatkan garis dan tambahkan margin di bawah */
+  opacity: 0.5; /* Transparansi garis (opsional) */
 }
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%; /* Panjang garis sesuai teks */
-  height: 1px; /* Ketebalan garis */
-  background-color: black; /* Warna garis */
+.divider {
+  height: 2rem;
+}
+
+/* LOGO STYLE */
+/* Logo Wrapper */
+.logo-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Agar bisa pindah baris jika layar terlalu kecil */
+  justify-content: center; /* Pusatkan logo */
+  gap: 2rem; /* Jarak antar logo */
+  margin-top: 2rem; /* Tambahkan jarak dari judul */
+}
+
+/* Kotak bundar untuk setiap logo */
+.logo-container {
+  width: 7rem; /* Ukuran kotak */
+  height: 7rem; /* Ukuran kotak */
+  border-radius: 10%; /* Membuat bentuk bundar */
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  background-color: #ffffff; /* Warna background kotak */
+  border: 0.1rem solid rgba(0, 0, 0, 0.5); /* Border */
+  padding: 0.8rem; /* Padding di dalam kotak */
+  overflow: hidden; /* Memastikan konten tidak melebihi kotak */
+  transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+/* Logo di dalam kotak */
+.logo-img {
+  max-width: 100%; /* Maksimal lebar sesuai kontainer */
+  max-height: 100%; /* Maksimal tinggi sesuai kontainer */
+  object-fit: contain; /* Menjaga proporsi logo */
+}
+
+
+/* Efek hover */
+.logo-container:hover {
+  transform: scale(1.05); /* Zoom saat hover */
+}
+
+/* EFEK TOMBOL BERANDA */
+#tombolberanda {
+  background-color: black;
+  color: white;
+  border: 0.15rem solid white;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+#tombolberanda:hover {
+  background-color: white;
+  color: black;
+  border: 0.15rem solid white;
+  transform: scale(1.1);
+}
+
+#tombolkontak {
+  background-color: white;
+  color: black;
+  border: 0.15rem solid black;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+#tombolkontak:hover {
+  background-color: black;
+  color: white;
+  border: 0.15rem solid black;
+  transform: scale(1.1);
 }
 
 
@@ -137,5 +224,14 @@ h4 {
 
   img.smaller-img {
     width: 80%; /* Atur gambar agar lebih kecil */
+  }
+
+  .logo-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-img {
+    width: 50%;
   }
 }
