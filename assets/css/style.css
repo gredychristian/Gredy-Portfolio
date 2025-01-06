@@ -1,6 +1,6 @@
 
 
-/* General Styling */
+/* GENERAL STYLING */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 
 html {
@@ -19,12 +19,7 @@ footer {
   text-align: center;
 }
 
-/* CONTAINER PADDING */
-.container {
-  padding: 1.5rem 0.5rem;
-}
-
-/* NAVBAR STYLING*/
+/* GENERAL NAVBAR STYLING*/
 .navbar {
   padding: 0.5rem 0;
   position: fixed;
@@ -57,9 +52,24 @@ footer {
   color: #343a40 !important;
 }
 
-/* Gaya untuk gambar agar nempel di kanan */
+/* DROPDOWN NAVBAR STYLING*/
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ccc; /* Ubah warna link saat hover (opsional) */
+}
+
+/* IMAGE STYLING */
 .smaller-img {
-  max-width: 60%; /* Sesuaikan dengan lebar yang diinginkan */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 60%;
   height: auto;
   border-radius: 10%;
   border: 0.2rem solid rgba(255, 255, 255, 1);
@@ -70,7 +80,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* Main Size */
+/* MAIN SIZE */
 .main-half-screen {
   min-height : 50vh;
   display: flex;
@@ -85,7 +95,20 @@ footer {
   justify-content: center; /* Menjaga konten tetap di tengah secara vertikal */
 }
 
-/* Text Style */
+.container {
+  padding: 1.5rem 0;
+}
+
+.row {
+  min-height: 75vh;
+}
+
+/* ALL TEXT STYLING */
+h0, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
 h0 {
   font-weight: bold; /* Membuat tulisan tebal */
   font-size: 8rem;    /* Menentukan ukuran font, sesuaikan sesuai kebutuhan */
@@ -102,11 +125,9 @@ h4 {
 
 /* DIVIDER LINE */
 .section-divider {
-  border: none; /* Hilangkan gaya default <hr> */
-  border-top: 1px solid #000; /* Warna dan ketebalan garis */
+  border-top: 0.1rem solid rgb(0, 0, 0); /* Warna dan ketebalan garis */
   width: 100%;
-  margin: 0 auto 4rem; /* Pusatkan garis dan tambahkan margin di bawah */
-  opacity: 0.5; /* Transparansi garis (opsional) */
+  opacity: 0.5;
 }
 
 .divider {
@@ -120,7 +141,7 @@ h4 {
   flex-wrap: wrap; /* Agar bisa pindah baris jika layar terlalu kecil */
   justify-content: center; /* Pusatkan logo */
   gap: 2rem; /* Jarak antar logo */
-  margin-top: 2rem; /* Tambahkan jarak dari judul */
+  margin: 1rem 0rem; /* Tambahkan jarak dari judul */
 }
 
 /* Kotak bundar untuk setiap logo */
@@ -183,7 +204,12 @@ h4 {
 }
 
 
-@media (max-width: 1080px) {
+/* RESPONSIVE WEB STYLING */
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .smaller-img {
     width: 100%; /* Pastikan gambar tidak keluar dari layar */
     height: auto;
@@ -191,8 +217,12 @@ h4 {
   }
 
   h0 {
-    font-size: 3rem; /* Perkecil ukuran heading */
+    font-size: 2rem; /* Perkecil ukuran heading */
     text-align: center; /* Centerkan teks untuk layar kecil */
+  }
+
+  h4 {
+    font-size: 1.25rem;
   }
 
   .btn {
@@ -212,7 +242,7 @@ h4 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1080px) {
+@media (min-width: 500px) and (max-width: 767px) {
   h0 {
     font-size: 4rem;
     text-align: left !important;
