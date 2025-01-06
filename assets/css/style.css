@@ -80,6 +80,14 @@ footer {
   transform: scale(1.05);
 }
 
+/* GALLERY STYLING */
+.gallery-img {
+  height: 20rem; /* Tinggi tetap */
+  width: 100%; /* Lebar penuh */
+  object-fit: cover; /* Memastikan foto ter-crop dengan proporsi yang benar */
+  display: block; /* Menghilangkan space bawah */
+}
+
 /* MAIN SIZE */
 .main-half-screen {
   min-height : 50vh;
