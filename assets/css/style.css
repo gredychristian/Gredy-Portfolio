@@ -19,6 +19,10 @@ footer {
   text-align: center;
 }
 
+ul {
+  margin-bottom: 0;
+}
+
 /* GENERAL NAVBAR STYLING*/
 .navbar {
   padding: 0.5rem 0;
@@ -44,12 +48,12 @@ footer {
 }
 
 .nav-link {
-  padding: 0.5rem 10rem;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-link.active {
-  font-weight: bold;
-  color: #343a40 !important;
+.nav-item {
+  padding: 0.25rem 0.5rem;
 }
 
 /* DROPDOWN NAVBAR STYLING*/
@@ -81,11 +85,32 @@ footer {
 }
 
 /* GALLERY STYLING */
-.gallery-img {
-  height: 20rem; /* Tinggi tetap */
-  width: 100%; /* Lebar penuh */
-  object-fit: cover; /* Memastikan foto ter-crop dengan proporsi yang benar */
-  display: block; /* Menghilangkan space bawah */
+/* Wrapper untuk galeri */
+.gallery-wrapper {
+  display: flex;/* Mengatur foto dalam satu baris */
+  justify-content: space-between; /* Memusatkan galeri */
+  gap: 1rem; /* Jarak antar foto */
+  align-items: flex-start; /* Menjaga foto rata atas */
+  flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+/* Kontainer individual untuk foto */
+.photo-container {
+  width: calc(33.333% - 1rem); /* Lebar tiap foto sama dalam 3 kolom */
+  max-width: auto; /* Membatasi lebar maksimum */
+  aspect-ratio: 3 / 2; /* Menjaga proporsi kotak */
+  overflow: hidden; /* Memastikan foto tidak keluar kotak */
+  border-radius: 1rem; /* Membuat sudut membulat */
+  position: relative;
+}
+
+/* Gambar di dalam kontainer */
+.photo-container img {
+  width: 100%; /* Gambar mengisi lebar kontainer */
+  height: 100%; /* Gambar mengisi tinggi kontainer */
+  object-fit: cover; /* Memastikan gambar dipotong proporsional */
+  display: block;
+  border-radius: 0.5rem;
 }
 
 /* MAIN SIZE */
@@ -147,14 +172,13 @@ h2, h3, h4 {
 }
 
 /* LIST STYLING */
-
 .list-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   border: 0.1rem solid rgba(0, 0, 0, 0.5); /* Border */
   border-radius: 1rem;
-  padding: 1rem; /* Padding di dalam kotak */
+  padding: 0.5rem; /* Padding di dalam kotak */
   overflow: hidden;
   box-sizing: border-box;
   transition: transform 0.3s ease;
@@ -163,6 +187,10 @@ h2, h3, h4 {
 
 .list-container:hover {
   transform: scale(1.01); /* Zoom saat hover */
+}
+
+.list-padding {
+  padding: 0.5rem;
 }
 
 /* LOGO STYLING */
@@ -270,6 +298,10 @@ h2, h3, h4 {
   footer p {
     font-size: 0.8rem;
   }
+
+  .photo-container {
+    width: calc(50% - 1rem); /* Dua kolom di layar medium */
+  }
 }
 
 @media (min-width: 500px) and (max-width: 767px) {
@@ -293,5 +325,9 @@ h2, h3, h4 {
 
   .logo-img {
     width: 50%;
+  }
+
+  .photo-container {
+    width: 100%; /* Satu kolom di layar kecil */
   }
 }

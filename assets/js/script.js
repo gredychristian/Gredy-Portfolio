@@ -15,9 +15,3 @@ function loadHTML(file, elementId) {
       console.error('Error loading HTML:', error);
     });
 }
-
-// Load header and footer content
-document.addEventListener('DOMContentLoaded', function () {
-  loadHTML('assets/header.html', 'header-container');
-  loadHTML('assets/footer.html', 'footer-container');
-});
