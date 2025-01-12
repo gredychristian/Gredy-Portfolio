@@ -60,11 +60,135 @@
         <h3>Deteksi Kendaraan Menggunakan Arsitektur YOLOv8</h3>
         <p class="i">Mata Kuliah Analisis Kebutuhan dan Riset Informatika | September 2024 - Februari 2025</p>
         <ul class="square-list">
-          <li>Mengambil dataset berupa rekaman video dari aplikasi SITS CCTV Surabaya. Aplikasi SITS Surabaya menyediakan pemantauan CCTV lalu lintas di jalanan Surabaya secara real-time dalam bentuk live video.</li>
-          <li>Video yang telah diambil dari aplikasi diproses, dengan melakukan export menjadi gambar. Gambar yang dihasilkan merupakan export frame dari video setiap 10 detik. Dari video berduari 6 menit, didapatkan 120 gambar dataset.</li>
-          <li>120 gambar dataset lalu lintas tersebut kemudian dilakukan anotasi satu per satu secara manual. Dilakukan juga pelabelan data setiap objek seperti mobil, motor, dan bus.</li>
-          <li>Berhasil mencapai peringkat 17 nasional di Divisi PSV-ERC mewakili UPN “Veteran” Jawa Timur.</li>
+          <li>Mengambil dataset berupa rekaman video dari aplikasi SITS CCTV Surabaya. Aplikasi SITS Surabaya
+            menyediakan pemantauan CCTV lalu lintas di jalanan Surabaya secara real-time dalam bentuk live video.</li>
+          <li>Video yang telah diambil dari aplikasi diproses, dengan melakukan export menjadi gambar. Gambar yang
+            dihasilkan merupakan export frame dari video setiap 10 detik. Dari video berduari 6 menit, didapatkan 120
+            gambar dataset.</li>
+          <li>120 gambar dataset lalu lintas tersebut dilakukan anotasi satu per satu secara manual. Dilakukan juga
+            pelabelan data pada setiap objek seperti mobil, motor, dan bus. Augmentasi data juga diterapkan pada objek
+            berupa mirroring secara horizontal.</li>
+          <li>Menyusun program deteksi pada Jupyter Notebook, lalu dataset yang sudah diproses di import ke Notebook.
+          </li>
+          <li>Melakukan percobaan pertama, melanjutkan pemodelan dengan 50 epoch. Hasilnya, program mampu mendeteksi
+            kendaraan. Uji coba menggunakan video asli dan diperoleh rata-rata confidence rate diatas 70%.</li>
+          <li>Rencananya program ini akan dikembangkan menjadi bagian dari proyek Intelligent Traffic Control System
+            (ITCS) yang akan diajukan menjadi topik skripsi saya.</li>
         </ul>
+      </div>
+      <!-- Galeri Foto (hidden by default) -->
+      <div class="gallery-wrapper list-padding">
+        <div class="photo-container">
+          <img
+            src="https://raw.githubusercontent.com/gredychristian/YOLOv8-VehicleDetection/refs/heads/main/darmo-detection.gif">
+        </div>
+        <div class="photo-container">
+          <img
+            src="https://raw.githubusercontent.com/gredychristian/YOLOv8-VehicleDetection/refs/heads/main/darmo-detection.jpg">
+        </div>
+        <div class="photo-container">
+        </div>
+      </div>
+
+      <div class="list-padding">
+        <a href="https://github.com/gredychristian/YOLOv8-VehicleDetection" class="btn btn-dark" target="_blank">Lihat
+          Repositori</a>
+      </div>
+    </section>
+
+    <!-- SECTION -->
+    <section class="list-container">
+      <div class="list-padding">
+        <h3>Prediksi Cuaca Menggunakan Algoritma Regresi Linear</h3>
+        <p class="i">Mata Kuliah Case Based Reasoning | Oktober 2024 - Desember 2024</p>
+        <ul class="square-list">
+          <li>Membuat program prediksi cuaca menggunakan algoritma regresi linear. Secara spesifik, yang diprediksi
+            adalah Global Radiation berdasarkan nilai Sunshine dan Temperature.</li>
+          <li>Dataset yang digunakan dalam menyusun model ini adalah dataset London Weather dari Tahun 1979 - 2020 yang
+            diambil dari Kaggle. Dataset ini memiliki atribut timestamp, date, cloud_cover, sunshine, global_radiation,
+            max_temp, mean_temp, min_temp, precipitation, pressure, dan snow_depth.</li>
+          <li>Atribut yang digunakan sebagai feature (x) adalah sunshine, max_temp, mean_temp, dan min_temp. Sedangkan
+            target (y) nya adalah global_radiation. Pemisahan train dan test yaitu 80:20.</li>
+          <li>Hasil pemodelan regresi linear menunjukkan akurasi prediksi pada data testing mencapai 85%.</li>
+          <li>Tersedia Web App untuk mempermudah penggunaan model. Pengguna cukup memasukkan data Sunshine, Max Temp, Mean Temp, dan Min Temp pada web, lalu hasil prediksi Global Radiation akan muncuk.</li>
+        </ul>
+      </div>
+      <!-- Galeri Foto (hidden by default) -->
+      <div class="gallery-wrapper list-padding">
+        <div class="photo-container">
+          <img
+            src="https://raw.githubusercontent.com/gredychristian/London-Weather-Prediction/refs/heads/main/Proses%20Input.png">
+        </div>
+        <div class="photo-container">
+          <img
+            src="https://raw.githubusercontent.com/gredychristian/London-Weather-Prediction/refs/heads/main/Hasil%20Prediksi.png">
+        </div>
+        <div class="photo-container">
+        </div>
+      </div>
+
+      <div class="list-padding">
+        <a href="https://github.com/gredychristian/London-Weather-Prediction" class="btn btn-dark" target="_blank">Lihat
+          Repositori</a>
+      </div>
+    </section>
+
+    <!-- SECTION -->
+    <section class="list-container">
+      <div class="list-padding">
+        <h3>SeaGate EV Prototipe Kapal Platform Supply Vessel Bertenaga Listrik</h3>
+        <p class="i">Kontes Kapal Indonesia 2024 Divisi ERC | Agustus 2024 - Oktober 2024</p>
+        <ul class="square-list">
+          <li>Membuat prototipe kapal Platform Supply Vessel bertenaga listrik dan dilombakan pada Kontes Kapal Indonesia 2024.</li>
+          <li>Proses pengajuan Hak Cipta kategori Desain Industri sedang berlangsung.</li>
+        </ul>
+      </div>
+      <!-- Galeri Foto (hidden by default) -->
+      <div class="gallery-wrapper list-padding">
+        <div class="photo-container">
+          <img
+            src="https://i.imgur.com/SlobT0o.jpeg">
+        </div>
+        <div class="photo-container">
+          <img src="https://i.imgur.com/55GjorW.jpeg">
+        </div>
+        <div class="photo-container">
+          <img src="https://i.imgur.com/meq9pXb.png">
+        </div>
+      </div>
+
+      <div class="list-padding">
+        <a href="https://github.com/gredychristian/London-Weather-Prediction" class="btn btn-dark" target="_blank">Lihat
+          Repositori</a>
+      </div>
+    </section>
+
+    <!-- SECTION -->
+    <section class="list-container">
+      <div class="list-padding">
+        <h3>Jurnal Berjudul "Wayang’s Images Recognition using Vision Transformer"</h3>
+        <p class="i">International Journal of Data Science, Engineering, and Analytics | Mei 2024 - Desember 2024</p>
+        <ul class="square-list">
+          <li>Membuat prototipe kapal Platform Supply Vessel bertenaga listrik dan dilombakan pada Kontes Kapal Indonesia 2024.</li>
+          <li>Proses pengajuan Hak Cipta kategori Desain Industri sedang berlangsung.</li>
+        </ul>
+      </div>
+      <!-- Galeri Foto (hidden by default) -->
+      <div class="gallery-wrapper list-padding">
+        <div class="photo-container">
+          <img
+            src="https://i.imgur.com/SlobT0o.jpeg">
+        </div>
+        <div class="photo-container">
+          <img src="https://i.imgur.com/55GjorW.jpeg">
+        </div>
+        <div class="photo-container">
+          <img src="https://i.imgur.com/meq9pXb.png">
+        </div>
+      </div>
+
+      <div class="list-padding">
+        <a href="https://ijdasea.upnjatim.ac.id/index.php/ijdasea/article/view/24" class="btn btn-dark" target="_blank">Lihat Artikel</a>
       </div>
     </section>
 
