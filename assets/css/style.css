@@ -152,7 +152,7 @@ h0, h1, h2, h3, h4, h5, h6, p {
 
 h0 {
   font-weight: bold; /* Membuat tulisan tebal */
-  font-size: 8rem;    /* Menentukan ukuran font, sesuaikan sesuai kebutuhan */
+  font-size: 7rem;    /* Menentukan ukuran font, sesuaikan sesuai kebutuhan */
   line-height: 1;
 }
 
@@ -184,7 +184,7 @@ h2, h3, h4 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 0.1rem solid rgba(0, 0, 0, 0.5); /* Border */
+  border: 0.1rem solid rgba(121, 121, 121, 0.5); /* Border */
   border-radius: 1rem;
   padding: 0.5rem; /* Padding di dalam kotak */
   overflow: hidden;
