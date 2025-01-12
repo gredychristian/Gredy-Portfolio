@@ -84,11 +84,19 @@ ul {
   transform: scale(1.05);
 }
 
-/* GALLERY STYLING */
+/* GALLERY & BUTTON STYLING */
 /* Wrapper untuk galeri */
 .gallery-wrapper {
   display: flex;/* Mengatur foto dalam satu baris */
   justify-content: space-between; /* Memusatkan galeri */
+  gap: 1rem; /* Jarak antar foto */
+  align-items: flex-start; /* Menjaga foto rata atas */
+  flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.button-wrapper {
+  display: flex;/* Mengatur foto dalam satu baris */
+  justify-content: left; /* Memusatkan galeri */
   gap: 1rem; /* Jarak antar foto */
   align-items: flex-start; /* Menjaga foto rata atas */
   flex-wrap: wrap; /* Agar responsif di layar kecil */
